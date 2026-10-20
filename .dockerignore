@@ -1,0 +1,7 @@
+.git
+.cache
+.artifacts
+vendor
+tests/integration/tmp
+.env
+config/*.local.php
