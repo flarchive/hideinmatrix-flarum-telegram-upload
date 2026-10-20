@@ -1,0 +1,20 @@
+fof-upload:
+  admin:
+    upload_methods:
+      telegram: Telegram（tg-disk，10 MiB）
+
+hideinmatrix-telegram-upload:
+  admin:
+    upload_url_label: 上传接口 URL
+    upload_url_help: 填写完整 HTTPS 接口地址，以 /api/telegram/send 结尾。不要包含密钥或查询参数。
+    api_key_help: 填写与 tg-disk 服务端 NUXT_API_KEY 相同的密钥，至少 32 个字符。仅管理员可读取，不会发送到论坛公开 API。
+    chat_id_label: 上传频道 ID
+    chat_id_help: 填写 Telegram 数字频道 ID（通常以 -100 开头），并确保 tg-disk 的 Bot 已获频道发帖权限。
+    errors:
+      upload_url: 请填写以 /api/telegram/send 结尾的完整 HTTPS 接口地址，不含账号、查询参数或片段。
+      api_key: API Key 至少需要 32 个字符，不能包含换行等控制字符。
+      chat_id: 请填写 Telegram 数字频道 ID。
+  api:
+    too_large: 附件大小不能超过 10 MiB。
+    upload_failed: Telegram 上传失败，请检查 tg-disk 配置后重试。
+    authentication_failed: tg-disk 拒绝鉴权，请检查 API Key 和上游访问策略。

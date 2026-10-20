@@ -1,0 +1,16 @@
+/vendor/
+/js/node_modules/
+/js/dist/*.map
+/composer.lock
+/.cache/
+/.artifacts/
+/.env
+/.env.*
+!/.env.example
+/config/*.local.php
+/.idea/
+/.vscode/
+.DS_Store
+/tests/.phpunit.cache/
+/tests/.phpunit.result.cache
+/tests/integration/tmp/
