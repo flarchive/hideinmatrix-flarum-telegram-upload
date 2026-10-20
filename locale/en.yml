@@ -1,0 +1,26 @@
+fof-upload:
+  admin:
+    upload_methods:
+      telegram: tg-disk (Telegram / R2, 10 MiB)
+
+hideinmatrix-telegram-upload:
+  admin:
+    base_url_label: tg-disk site URL
+    base_url_help: Enter only the HTTPS site URL, e.g. https://pan.example.com, without /api/telegram/send.
+    provider_label: Storage for new uploads
+    provider_help: Changes only affect new uploads. Each attachment keeps its absolute URL from the time it was uploaded.
+    upload_url_label: Upload endpoint URL (legacy)
+    upload_url_help: Enter the full HTTPS endpoint ending in /api/telegram/send, without credentials or query parameters.
+    api_key_help: Enter the same secret as tg-disk's NUXT_API_KEY (at least 32 characters). Only administrators can read this setting; it is never exposed in the public forum API.
+    chat_id_label: Upload channel ID
+    chat_id_help: Required for Telegram only (usually starting with -100). R2 needs no channel ID; configure its bucket in tg-disk.
+    errors:
+      base_url: Enter an HTTPS site URL without an upload endpoint, credentials, query parameters or fragments.
+      provider: Select Telegram or Cloudflare R2.
+      upload_url: Enter an HTTPS endpoint ending in /api/telegram/send without credentials, query parameters or fragments.
+      api_key: The API key must contain at least 32 characters and no control characters.
+      chat_id: Enter a numeric Telegram channel ID.
+  api:
+    too_large: Attachments must be no larger than 10 MiB.
+    upload_failed: tg-disk upload failed. Check the tg-disk configuration and try again.
+    authentication_failed: tg-disk rejected authentication. Check the API key and upstream access policy.

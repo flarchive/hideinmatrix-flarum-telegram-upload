@@ -1,0 +1,45 @@
+{
+    "name": "hideinmatrix/flarum-telegram-upload",
+    "description": "Telegram attachment storage for Flarum 2.x through FoF Upload and tg-disk.",
+    "keywords": ["flarum", "telegram", "upload", "tg-disk"],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "authors": [{"name": "HideInMatrix", "homepage": "https://github.com/HideInMatrix", "role": "Developer"}],
+    "support": {
+        "issues": "https://github.com/HideInMatrix/flarum-telegram-upload/issues",
+        "source": "https://github.com/HideInMatrix/flarum-telegram-upload"
+    },
+    "require": {
+        "php": "^8.3",
+        "flarum/core": "^2.0",
+        "fof/upload": "^2.0.1",
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "require-dev": {"flarum/testing": "^2.0"},
+    "autoload": {"psr-4": {"HideInMatrix\\TelegramUpload\\": "src/"}},
+    "autoload-dev": {"psr-4": {"HideInMatrix\\TelegramUpload\\Tests\\": "tests/"}},
+    "extra": {
+        "flarum-extension": {
+            "title": "Telegram Upload",
+            "category": "feature",
+            "icon": {"name": "fab fa-telegram", "backgroundColor": "#229ed9", "color": "#ffffff"}
+        },
+        "flarum-cli": {"modules": {
+            "forum": false, "admin": true, "js": true, "jsCommon": false,
+            "css": false, "locale": true, "gitConf": true, "githubActions": true,
+            "prettier": false, "typescript": false, "bundlewatch": false,
+            "frontendTesting": false, "backendTesting": true, "phpstan": false,
+            "editorConfig": true, "styleci": true
+        }}
+    },
+    "scripts": {
+        "test": ["@test:unit", "@test:integration"],
+        "test:unit": "phpunit -c tests/phpunit.unit.xml",
+        "test:integration": "phpunit -c tests/phpunit.integration.xml",
+        "test:setup": "@php tests/integration/setup.php",
+        "lint": "@php scripts/lint.php"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {"sort-packages": true, "allow-plugins": {"php-http/discovery": false}}
+}
