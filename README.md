@@ -2,13 +2,13 @@
 
 > **Read-only archive of released versions of hideinmatrix/flarum-telegram-upload.** Not for installation: use [Packagist](https://packagist.org/packages/hideinmatrix/flarum-telegram-upload) or the [upstream repository](https://github.com/HideInMatrix/flarum-telegram-upload).
 
-**1** versions archived · Latest: [`v0.1.0`](https://github.com/flarchive/hideinmatrix-flarum-telegram-upload/tree/archive/v0.1.0) · License: `MIT` · Flarum: `^2.0`
+**0** versions archived · Latest: [`v0.2.0`](https://github.com/flarchive/hideinmatrix-flarum-telegram-upload/tree/archive/v0.2.0) · License: `MIT` · Flarum: `^2.0`
 
 ## Archived Versions
 
 | Version | Released | Flarum | Source |
 |---|---|---|---|
-| `v0.1.0` | 2026-10-19 | `^2.0` | [Browse](https://github.com/flarchive/hideinmatrix-flarum-telegram-upload/tree/archive/v0.1.0) |
+| — | — | — | — |
 
 Catalog entry: [packages/hideinmatrix-flarum-telegram-upload.json](https://github.com/flarchive/archive-index/blob/main/packages/hideinmatrix-flarum-telegram-upload.json)
 
